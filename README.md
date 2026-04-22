@@ -5,7 +5,7 @@ A simple vector system for C.
 
 How do I start the vector? No problem!
 
-'''c
+``` c
 #include "vectors.h"
 
 int main(){
@@ -19,7 +19,7 @@ int main(){
   vector_free(vec);
   return 0;
 }
-'''
+```
 
 This is a simple program using my vector system, showing all the (useful) methods.
 In addition, there is **vector_capacity(vec)** which returns the capacity of the vector.
