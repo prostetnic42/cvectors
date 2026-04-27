@@ -28,6 +28,6 @@ typedef struct {
 			} \
 			(vector) = (void*)(p + 1); \
 		} \
-	} while (0);
+	} while (0)
 	
 #define vector_free(vector) free((Header *)(vector) - 1)
