@@ -13,7 +13,7 @@ typedef struct {
 #define vector_len(vector) ((Header *)(vector) - 1)->count
 #define vector_capacity(vector) ((Header *)(vector) - 1)->capacity
 
-#define vector_push(vector, item) { \
+#define vector_push(vector, item) do { \
 	if (!vector) (vector) = (void *)((Header *)malloc(sizeof(Header) + VECTOR_INIT_CAPACITY * sizeof(item)) + 1); \
 		if ((vector) == NULL) { \
 			perror("vector_push"); \
@@ -28,6 +28,6 @@ typedef struct {
 			} \
 			(vector) = (void*)(p + 1); \
 		} \
-	}
+	} while (0);
 	
 #define vector_free(vector) free((Header *)(vector) - 1)
